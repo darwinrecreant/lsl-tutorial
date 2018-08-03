@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href = "https://www.tutorialspoint.com" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/highlight.js/highlight.pack.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-aria.min.js"></script>
+  <link rel="stylesheet" href="js/highlight.js/styles/darcula.css">
+  <title>LSL Tutorial</title>
+</head>
+<body>
+  <select id="test"></select>
+  <pre><code class="lsl">
+
+default
+{
+    state_entry()
+    {
+        llSay(PUBLIC_CHANNEL, "Hello, Avatar!"); //Tests
+    }
+
+    touch_start(integer num_detected)
+    {
+        llSay(PUBLIC_CHANNEL, "Touched.");
+    }
+}
+  </code></pre>
+
+  <script>
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });</script>
+</body>
+</html>
